@@ -1,0 +1,133 @@
+﻿Assignment Solutions
+
+
+
+
+
+
+1.
+
+
+//Write a program to demonstrate method overloading with 3 different parameters.
+class demo{
+        
+        public void method(float i,int j) {
+                System.out.println("We are in float-int method");
+        }
+        public void method(double i,int j) {
+                System.out.println("We are in double-int method");
+        }
+        public void method(char i,double j) {
+                System.out.println("We are in char-double method");
+        }
+        
+}
+public class p1 {
+        public static void main(String[] args) {
+                demo d = new demo();
+                d.method(4.55F,5);
+                d.method(5.65,10);
+                d.method('X',3.33);
+        }
+}
+
+
+
+
+
+
+2.
+/*2. Write a program to create an object of an class which contain a
+method and call that class method in
+main method.*/
+class test{
+        public void m1() {
+                System.out.println("I am in test class in method m1");
+        }
+}
+public class p2 {
+        public static void main(String[] args) {
+                test t = new test();
+                t.m1();//calling m1 from main method
+        }
+}
+
+
+3.
+
+
+//3. Write a Java program to calculate the sum of all elements in an integer array?
+import java.util.*;
+public class p3 {
+        public static void main(String[] args) {
+                Scanner sc = new Scanner(System.in);
+                System.out.println("Enter the array size:");
+                int n = sc.nextInt();
+                int nums[] = new int[n];
+                System.out.println("Enter the integer array elements:");
+                for(int i=0;i<n;i++) {
+                        nums[i] = sc.nextInt();
+                }
+                
+                int sum = 0;
+                for(int i=0;i<nums.length;i++) {
+                        sum += nums[i];
+                }
+                
+                System.out.println("The sum of the elements is: "+sum);
+                
+        }
+}
+
+
+
+
+4.
+
+
+//Write a Java program to find the index of a specific element in an integer array.?
+import java.util.Scanner;
+public class p4{
+        public static void main(String[] args) {
+                Scanner sc = new Scanner(System.in);
+                System.out.println("Enter the array size:");
+                int n = sc.nextInt();
+                int nums[] = new int[n];
+                System.out.println("Enter the integer array elements:");
+                for(int i=0;i<n;i++) {
+                        nums[i] = sc.nextInt();
+                }
+                
+                System.out.println("Enter the element you are looking in the array:");
+int key = sc.nextInt();
+                
+                for(int i=0;i<nums.length;i++) {
+                        if(nums[i]==key)
+                                System.out.println("The element is present in the index: "+i+" from 0");
+                                
+                }
+                
+                
+                
+        }
+}
+
+
+
+
+5.
+
+
+
+
+//Write a Java program to print an entire array?
+public class p5 {
+        public static void main(String[] args) {
+                
+                int array[]= {4,7,5,8,4};
+                for(int i = 0;i<array.length;i++){
+                         System.out.println(array[i]);
+                }
+                        
+        }
+}
